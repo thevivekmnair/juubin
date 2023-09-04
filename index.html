@@ -34,7 +34,7 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = "973188162";
+    const serviceWorkerVersion = "2413206855";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer=""></script>
@@ -170,7 +170,7 @@
     <img src="splash/img/light-2x.png" alt="Loading indicator...">
 
 
-    <script>
+    <script type="module">
       window.addEventListener('load', function () {
         var loading = document.querySelector('#loading');
         _flutter.loader.loadEntrypoint({
@@ -191,6 +191,24 @@
           }, 200);
         });
       });
+
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBlkXWXslEkpDPUNAv0BzCd7SnfLaVkEMo",
+        authDomain: "juubin-20cf9.firebaseapp.com",
+        projectId: "juubin-20cf9",
+        storageBucket: "juubin-20cf9.appspot.com",
+        messagingSenderId: "360016888637",
+        appId: "1:360016888637:web:5dbbb5b9d9862743bfbb54"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
     </script>
 
 
